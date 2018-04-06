@@ -5,14 +5,6 @@ var path = require('path');
 var concat = require('gulp-concat');
 var browserSync = require('browser-sync').create();
 
-gulp.task('browserSync', function () {
-    browserSync.init({
-        server: {
-            baseDir: './'
-        },
-    });
-});
-
 gulp.task('less', function () {
     return gulp.src([
         './node_modules/normalize.css/normalize.css',

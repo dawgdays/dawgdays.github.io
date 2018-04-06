@@ -311,7 +311,7 @@ template {
 }
 .footer {
   grid-area: footer;
-  background-color: green;
+  background-color: purple;
 }
 .grid {
   min-height: 100vh;
