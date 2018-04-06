@@ -1,0 +1,22 @@
+{
+  "name": "dawgdays.github.io",
+  "version": "1.0.0",
+  "description": "Fun with coding!",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawgdays/dawgdays.github.io.git"
+  },
+  "author": "Caitlin Allie & Rich McLaughlin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dawgdays/dawgdays.github.io/issues"
+  },
+  "homepage": "https://github.com/dawgdays/dawgdays.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
