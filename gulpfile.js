@@ -23,12 +23,21 @@ gulp.task('js', function () {
         './src/scripts/**/*.js'
     ])
         .pipe(concat('app.js'))
-        .pipe(gulp.dest('./public/scripts'));
+        .pipe(gulp.dest('./public/scripts'))
+        .pipe(browserSync.stream());        
 });
 
-gulp.task('watch', ['less', 'js'], function () {
+gulp.task('html', function () {
+    return gulp.src([
+        './**/*.html'
+    ])
+        .pipe(browserSync.stream());        
+});
+
+gulp.task('watch', ['less', 'js', 'html'], function () {
     gulp.watch('./src/styles/**/*.less', ['less']);
     gulp.watch('./src/scripts/**/*.js', ['js']);
+    gulp.watch('./**/*.html', ['html']); // todo - clean up
 
     browserSync.init({
         server: {
