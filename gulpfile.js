@@ -6,7 +6,7 @@ var serve = require('gulp-serve');
 var livereload = require('gulp-livereload');
 var concat = require('gulp-concat');
 
-gulp.task('default', ['less', 'serve', 'watch']);
+gulp.task('default', ['less', 'js', 'serve', 'watch']);
 
 gulp.task('less', function () {
     return gulp.src([
@@ -21,12 +21,22 @@ gulp.task('less', function () {
         .pipe(livereload());
 });
 
+gulp.task('js', function () {
+    return gulp.src([
+        './src/scripts/**/*.js'
+    ])
+        .pipe(concat('app.js'))                
+        .pipe(gulp.dest('./public/scripts'))
+        .pipe(livereload());
+});
+
 gulp.task('serve', serve({
     root: ['.'],
     port: 3000,
 }));
 
-gulp.task('watch', ['less'], function () {
+gulp.task('watch', ['less', 'js'], function () {
     livereload.listen();
-    gulp.watch('./src/styles/**/*.less', ['less'])
+    gulp.watch('./src/styles/**/*.less', ['less']);
+    gulp.watch('./src/scripts/**/*.js', ['js']);
 });
