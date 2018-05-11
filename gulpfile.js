@@ -8,7 +8,8 @@ var browserSync = require('browser-sync').create();
 gulp.task('less', function () {
     return gulp.src([
         './node_modules/normalize.css/normalize.css',
-        './src/styles/**/*.less'
+        './src/styles/**/*.less',
+        './src/components/**/*.less'
     ])
         .pipe(less({
             paths: [path.join(__dirname, 'less', 'includes')]
@@ -20,7 +21,8 @@ gulp.task('less', function () {
 
 gulp.task('js', function () {
     return gulp.src([
-        './src/scripts/**/*.js'
+        './src/scripts/**/*.js',
+        './src/components/**/*.js'
     ])
         .pipe(concat('app.js'))
         .pipe(gulp.dest('./public/scripts'))
@@ -35,8 +37,8 @@ gulp.task('html', function () {
 });
 
 gulp.task('watch', ['less', 'js', 'html'], function () {
-    gulp.watch('./src/styles/**/*.less', ['less']);
-    gulp.watch('./src/scripts/**/*.js', ['js']);
+    gulp.watch('./src/**/*.less', ['less']);
+    gulp.watch('./src/**/*.js', ['js']);
     gulp.watch('./**/*.html', ['html']); // todo - clean up
 
     browserSync.init({
