@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/dawgdays/dawgdays.github.io#readme",
   "devDependencies": {
+    "angular": "1.5.11",
+    "angular-ui-router": "^0.2.15",
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
