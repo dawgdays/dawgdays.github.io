@@ -3,6 +3,7 @@ var less = require('gulp-less');
 var watch = require('gulp-watch');
 var path = require('path');
 var concat = require('gulp-concat');
+var html2js = require('gulp-html2js');
 var browserSync = require('browser-sync').create();
 
 gulp.task('less', function () {
@@ -47,6 +48,20 @@ gulp.task('html', function () {
     ])
     .pipe(gulp.dest('./public'))        
     .pipe(browserSync.stream());        
+});
+
+gulp.task('html2js', function(){
+    gulp.src('./src/**/*.html')
+        .pipe(html2js('app-templates.js', {
+            adapter: 'angular',
+            base: '',
+            rename: function (moduleName) {
+                // prevent template names from starting with "src/"
+                return moduleName.replace('src/', '/');
+            },
+            name: 'app-templates'
+        }))
+        .pipe(gulp.dest('public/scripts/'));
 });
 
 gulp.task('watch', ['less', 'libraries-js', 'js', 'html'], function () {
