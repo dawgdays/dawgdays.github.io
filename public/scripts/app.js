@@ -3,13 +3,13 @@
 var app = app || {};
 app.controllers = app.controllers || {};
 
-
 app.controllers.main = function () {
     var main = this;
     console.log('main!');
 
     main.test = "test";
 };
+
 
 angular.module('app-routes', ['ui.router'])
     .config(['$stateProvider', '$urlRouterProvider', '$urlMatcherFactoryProvider', function ($stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider) {
