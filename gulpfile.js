@@ -59,7 +59,7 @@ gulp.task('images', function () {
 });
 
 gulp.task('html2js', function(){
-    gulp.src('./src/**/*.html')
+    return gulp.src('./src/**/*.html')
         .pipe(html2js('app-templates.js', {
             adapter: 'angular',
             base: '',
