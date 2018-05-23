@@ -8,6 +8,7 @@ var browserSync = require('browser-sync').create();
 gulp.task('less', function () {
     return gulp.src([
         './node_modules/normalize.css/normalize.css',
+        './node_modules/font-awesome/css/font-awesome.min.css',
         './src/styles/**/*.less',
         './src/components/**/*.less'
     ])
@@ -49,7 +50,15 @@ gulp.task('html', function () {
     .pipe(browserSync.stream());        
 });
 
-gulp.task('watch', ['less', 'libraries-js', 'js', 'html'], function () {
+gulp.task('fonts', function () {
+    return gulp.src([
+        './node_modules/font-awesome/fonts/*'
+    ])
+        .pipe(gulp.dest('./public/fonts'))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('watch', ['less', 'libraries-js', 'js', 'html', 'fonts'], function () {
     gulp.watch('./src/**/*.less', ['less']);
     gulp.watch('./src/**/*.js', ['js']);
     gulp.watch('./**/*.html', ['html']); // todo - clean up
