@@ -42,13 +42,21 @@ gulp.task('js', function () {
         .pipe(browserSync.stream());        
 });
 
-// gulp.task('html', function () {
-//     return gulp.src([
-//         './src/**/*.html'
-//     ])
-//     .pipe(gulp.dest('./public'))        
-//     .pipe(browserSync.stream());        
-// });
+gulp.task('fonts', function () {
+    return gulp.src([
+        './node_modules/font-awesome/fonts/*'
+    ])
+        .pipe(gulp.dest('./public/fonts'))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('images', function () {
+    return gulp.src([
+        './src/images/*',
+    ])
+        .pipe(gulp.dest('./public/images'))
+        .pipe(browserSync.stream());
+});
 
 gulp.task('html2js', function(){
     gulp.src('./src/**/*.html')
@@ -64,7 +72,7 @@ gulp.task('html2js', function(){
         .pipe(gulp.dest('public/scripts/'));
 });
 
-gulp.task('watch', ['less', 'libraries-js', 'js', 'html2js'], function () {
+gulp.task('watch', ['less', 'libraries-js', 'js', 'html2js', 'fonts', 'images'], function () {
     gulp.watch('./src/**/*.less', ['less']);
     gulp.watch('./src/**/*.js', ['js']);
     gulp.watch('./src/**/*.html', ['html2js']); // todo - clean up
