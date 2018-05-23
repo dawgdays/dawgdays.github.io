@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app="app" ng-strict-di>
     <head>
         <meta name="mobile-web-app-capable" content="yes">
         <link rel="apple-touch-icon" href="https://assets-cdn.github.com/favicon.ico">
@@ -17,8 +17,8 @@
         <div class="grid">
             <div class="header">Header</div>
             <div class="menu">Menu</div>
-            <div class="content">Content</div>
+            <div class="content" ui-view="content">Content</div>
             <div class="footer">Footer</div>
         </div>
     </body>
-</html>
+</html>`

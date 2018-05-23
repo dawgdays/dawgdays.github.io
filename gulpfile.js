@@ -33,6 +33,7 @@ gulp.task('js', function () {
     return gulp.src([
         './src/banner.js',
         './src/components/**/*.js',
+        './src/routes/**/*.js',
         './src/scripts/**/*.js'
     ])
         .pipe(concat('app.js'))
@@ -42,9 +43,10 @@ gulp.task('js', function () {
 
 gulp.task('html', function () {
     return gulp.src([
-        './**/*.html'
+        './src/**/*.html'
     ])
-        .pipe(browserSync.stream());        
+    .pipe(gulp.dest('./public'))        
+    .pipe(browserSync.stream());        
 });
 
 gulp.task('watch', ['less', 'libraries-js', 'js', 'html'], function () {
