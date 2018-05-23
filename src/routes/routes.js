@@ -16,8 +16,7 @@ angular.module('app-routes', ['ui.router'])
                 parent: 'default',
                 views: {
                     'content@': {
-                        //TODO - pull in html2js so templates don't have to use /public
-                        templateUrl: '/public/components/main/main.html',
+                        templateUrl: '/components/main/main.html',
                         controller: 'MainController',
                         controllerAs: 'main'
                     }
