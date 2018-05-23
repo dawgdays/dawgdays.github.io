@@ -10,5 +10,7 @@ $templateCache.put("/components/main/main.html","<div class=\"main\">\n" +
     "\n" +
     "    {{main.test}}\n" +
     "</div>")
+
+$templateCache.put("/components/menu/menu.html","<h1>Menu!</h1>")
 }]);
 })();

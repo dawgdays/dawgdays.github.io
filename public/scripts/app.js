@@ -10,6 +10,7 @@ app.controllers.main = function () {
     main.test = "test";
 };
 
+
 angular.module('app-routes', ['ui.router'])
     .config(['$stateProvider', '$urlRouterProvider', '$urlMatcherFactoryProvider', function ($stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider) {
 
@@ -21,7 +22,11 @@ angular.module('app-routes', ['ui.router'])
         $stateProvider
             .state('default', {
                 abstract: true,
-                views: {}
+                views: {
+                    'menu': {
+                        templateUrl: '/components/menu/menu.html'
+                    }
+                }
             })
             .state('main', {
                 url: '/main',

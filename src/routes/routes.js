@@ -9,7 +9,11 @@ angular.module('app-routes', ['ui.router'])
         $stateProvider
             .state('default', {
                 abstract: true,
-                views: {}
+                views: {
+                    'menu': {
+                        templateUrl: '/components/menu/menu.html'
+                    }
+                }
             })
             .state('main', {
                 url: '/main',
