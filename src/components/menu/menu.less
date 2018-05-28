@@ -1,0 +1,36 @@
+.menu {
+    display: grid;
+
+    .profile-pic {
+        display: grid;
+        justify-content: center;
+        padding: 20px;
+
+        img {
+            border-radius: 50%;
+            width: 100px;
+        }
+    }
+
+    .menu-item {
+        display: grid;
+
+        a {
+            padding: 15px;
+        }
+
+        &.active {
+            background-color: #566374;
+            color: white;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: #3C4859;
+        }
+
+        .fa {
+            margin-right: 5px;
+        }
+    }
+}

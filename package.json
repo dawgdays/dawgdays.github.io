@@ -20,6 +20,7 @@
     "angular": "1.5.11",
     "angular-ui-router": "^0.2.15",
     "browser-sync": "^2.23.6",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-html2js": "^0.4.2",

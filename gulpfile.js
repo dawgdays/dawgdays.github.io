@@ -9,6 +9,7 @@ var browserSync = require('browser-sync').create();
 gulp.task('less', function () {
     return gulp.src([
         './node_modules/normalize.css/normalize.css',
+        './node_modules/font-awesome/css/font-awesome.min.css',
         './src/styles/**/*.less',
         './src/components/**/*.less'
     ])
@@ -58,7 +59,7 @@ gulp.task('images', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('html2js', function(){
+gulp.task('html2js', function () {
     return gulp.src('./src/**/*.html')
         .pipe(html2js('app-templates.js', {
             adapter: 'angular',

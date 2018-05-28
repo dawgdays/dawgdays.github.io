@@ -1,1 +1,19 @@
-<h1>Menu!</h1>
+<div class="menu-content">
+
+    <!-- todo: make a collapsed version of the menu for mobile view -->
+
+    <div class="profile-pic">
+        <img src="/public/images/verty.png">
+    </div>
+
+    <!-- todo: toggle 'active' class based on current state-->
+    <div class="menu-item active" ui-sref="main">
+        <a ui-sref="main"><i class="fa fa-home"></i>Home</a>
+    </div>
+    <div class="menu-item">
+        <a ui-sref="blog"><i class="fa fa-book"></i>Blog</a>
+    </div>
+    <div class="menu-item" ui-sref="contact">
+        <a ui-sref="contact"><i class="fa fa-phone"></i>Contact</a>
+    </div>
+</div>

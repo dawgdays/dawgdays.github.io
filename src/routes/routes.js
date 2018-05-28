@@ -25,5 +25,27 @@ angular.module('app-routes', ['ui.router'])
                         controllerAs: 'main'
                     }
                 }
+            })
+            .state('blog', {
+                url: '/blog',
+                parent: 'default',
+                views: {
+                    'content@': {
+                        templateUrl: '/components/main/main.html',
+                        controller: 'MainController',
+                        controllerAs: 'main'
+                    }
+                }
+            })
+            .state('contact', {
+                url: '/contact',
+                parent: 'default',
+                views: {
+                    'content@': {
+                        templateUrl: '/components/main/main.html',
+                        controller: 'MainController',
+                        controllerAs: 'main'
+                    }
+                }
             });
     }]);
