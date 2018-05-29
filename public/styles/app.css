@@ -2652,11 +2652,11 @@ a:hover {
 }
 .menu {
   grid-area: menu;
-  background-color: #737D88;
+  background-color: #86919d;
 }
 .content {
   grid-area: content;
-  background-color: #BAB4AF;
+  background-color: #e7dcd3;
   color: #391a25;
   padding: 0 15px;
 }
