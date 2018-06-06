@@ -32,6 +32,8 @@ angular.module('app-routes', ['ui.router'])
                 views: {
                     'content@': {
                         templateUrl: '/components/blog/blog.html',
+                        controller: 'BlogController',
+                        controllerAs: 'blog'
                     }
                 }
             })

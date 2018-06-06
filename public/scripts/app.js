@@ -3,6 +3,11 @@
 var app = app || {};
 app.controllers = app.controllers || {};
 
+app.controllers.blog = function () {
+    var blog = this;
+    console.log('blog!');
+};
+
 app.controllers.main = function () {
     var main = this;
     console.log('main!');
@@ -45,6 +50,8 @@ angular.module('app-routes', ['ui.router'])
                 views: {
                     'content@': {
                         templateUrl: '/components/blog/blog.html',
+                        controller: 'BlogController',
+                        controllerAs: 'blog'
                     }
                 }
             })
@@ -63,4 +70,6 @@ angular.module('app-routes', ['ui.router'])
 app.angularApp = angular.module('app', ['app-routes', 'app-templates']);
 
 //Register all controllers
+app.angularApp.controller('BlogController', [app.controllers.blog]);
 app.angularApp.controller('MainController', [app.controllers.main]);
+
