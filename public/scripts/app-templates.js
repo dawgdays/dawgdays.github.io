@@ -5,15 +5,6 @@ catch(err) { app = angular.module("app-templates", []); }
 app.run(["$templateCache", function($templateCache) {
 "use strict";
 
-$templateCache.put("/components/blog/blog.html","<div class=\"blog\">\n" +
-    "    <h1>Blog</h1>\n" +
-    "    <p>This is blog info</p>\n" +
-    "\n" +
-    "    <div ng-repeat=\"blogRow in blog.blogs\">\n" +
-    "        {{blogRow}}\n" +
-    "    </div>\n" +
-    "</div>")
-
 $templateCache.put("/components/contact/contact.html","<div class=\"contact\">\n" +
     "    <h1>Contact</h1>\n" +
     "    <p>This is contact info</p>\n" +
@@ -24,6 +15,16 @@ $templateCache.put("/components/main/main.html","<div class=\"main\">\n" +
     "    <p>Welcome to my site, put some basic info here!</p>\n" +
     "\n" +
     "    {{main.test}}\n" +
+    "</div>")
+
+$templateCache.put("/components/blog/blog.html","<div class=\"blog\">\n" +
+    "    <h1>Blog</h1>\n" +
+    "\n" +
+    "    <div ng-repeat=\"blogRow in blog.blogs | orderBy:'-date'\">\n" +
+    "        <img ng-src=\"{{blogRow.picture}}\">\n" +
+    "        <h2>{{blogRow.title}} ({{blogRow.date | date : 'MM/dd/yyyy'}})</h2>\n" +
+    "        <p>{{blogRow.content}}</p>\n" +
+    "    </div>\n" +
     "</div>")
 
 $templateCache.put("/components/menu/menu.html","<div class=\"menu-content\">\n" +
