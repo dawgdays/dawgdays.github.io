@@ -2706,14 +2706,14 @@ a:hover {
 }
 .menu .menu-item a {
   padding: 15px;
+  color: white;
 }
 .menu .menu-item.active {
-  background-color: #566374;
-  color: white;
+  background-color: #3C4859;
 }
 .menu .menu-item:hover {
   cursor: pointer;
-  background-color: #3C4859;
+  background-color: #566374;
 }
 .menu .menu-item .fa {
   margin-right: 5px;
