@@ -70,7 +70,8 @@ gulp.task('html2js', function () {
             },
             name: 'app-templates'
         }))
-        .pipe(gulp.dest('public/scripts/'));
+        .pipe(gulp.dest('public/scripts/'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('watch', ['less', 'libraries-js', 'js', 'html2js', 'fonts', 'images'], function () {

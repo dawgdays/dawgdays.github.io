@@ -8,6 +8,10 @@ app.run(["$templateCache", function($templateCache) {
 $templateCache.put("/components/blog/blog.html","<div class=\"blog\">\n" +
     "    <h1>Blog</h1>\n" +
     "    <p>This is blog info</p>\n" +
+    "\n" +
+    "    <div ng-repeat=\"blogRow in blog.blogs\">\n" +
+    "        {{blogRow}}\n" +
+    "    </div>\n" +
     "</div>")
 
 $templateCache.put("/components/contact/contact.html","<div class=\"contact\">\n" +

@@ -3,9 +3,13 @@
 var app = app || {};
 app.controllers = app.controllers || {};
 
-app.controllers.blog = function () {
+app.controllers.blog = function ($http) {
     var blog = this;
     console.log('blog!');
+
+    $http.get('/src/components/blog/blog.json').then(function(res){
+        blog.blogs = res.data.blogs;
+    });
 };
 
 app.controllers.main = function () {
@@ -70,6 +74,6 @@ angular.module('app-routes', ['ui.router'])
 app.angularApp = angular.module('app', ['app-routes', 'app-templates']);
 
 //Register all controllers
-app.angularApp.controller('BlogController', [app.controllers.blog]);
+app.angularApp.controller('BlogController', ['$http', app.controllers.blog]);
 app.angularApp.controller('MainController', [app.controllers.main]);
 

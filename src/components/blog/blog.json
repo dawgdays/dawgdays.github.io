@@ -5,6 +5,12 @@
             "date": "01/01/2018",
             "title": "My First Blog Post",
             "content": "I am learning how to blog"
+        },
+        {
+            "id": 2,
+            "date": "01/02/2018",
+            "title": "My Second Blog Post",
+            "content": "Bacon is pretty delicious, do you like bacon?"
         }
     ]
 }
