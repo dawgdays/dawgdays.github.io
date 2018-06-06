@@ -2681,8 +2681,12 @@ a:hover {
   .grid {
     grid-template-areas: "header" "menu" "content" "footer";
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px 1fr 30px;
+    grid-template-rows: 50px 130px 1fr 30px;
   }
+}
+
+.main {
+  color: #1E1D1E;
 }
 
 .menu {
@@ -2713,8 +2717,4 @@ a:hover {
 }
 .menu .menu-item .fa {
   margin-right: 5px;
-}
-
-.main {
-  color: #1E1D1E;
 }
