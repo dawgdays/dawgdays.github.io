@@ -11,7 +11,9 @@ angular.module('app-routes', ['ui.router'])
                 abstract: true,
                 views: {
                     'menu': {
-                        templateUrl: '/components/menu/menu.html'
+                        templateUrl: '/components/menu/menu.html',
+                        controller: 'MenuController',
+                        controllerAs: 'menu'
                     }
                 }
             })

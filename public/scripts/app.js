@@ -19,6 +19,13 @@ app.controllers.main = function () {
     main.test = "test";
 };
 
+app.controllers.menu = function ($state) {
+    var menu = this;
+
+    menu.getCurrentState = function () {
+        return $state.current.name;
+    };
+};
 
 angular.module('app-routes', ['ui.router'])
     .config(['$stateProvider', '$urlRouterProvider', '$urlMatcherFactoryProvider', function ($stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider) {
@@ -33,7 +40,9 @@ angular.module('app-routes', ['ui.router'])
                 abstract: true,
                 views: {
                     'menu': {
-                        templateUrl: '/components/menu/menu.html'
+                        templateUrl: '/components/menu/menu.html',
+                        controller: 'MenuController',
+                        controllerAs: 'menu'
                     }
                 }
             })
@@ -76,4 +85,5 @@ app.angularApp = angular.module('app', ['app-routes', 'app-templates']);
 //Register all controllers
 app.angularApp.controller('BlogController', ['$http', app.controllers.blog]);
 app.angularApp.controller('MainController', [app.controllers.main]);
+app.angularApp.controller('MenuController', ['$state', app.controllers.menu]);
 

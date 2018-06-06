@@ -6,14 +6,13 @@
         <img src="/public/images/verty.png">
     </div>
 
-    <!-- todo: toggle 'active' class based on current state-->
-    <div class="menu-item active" ui-sref="main">
+    <div class="menu-item" ng-class="{'active': menu.getCurrentState() === 'main'}">
         <a ui-sref="main"><i class="fa fa-home"></i>Home</a>
     </div>
-    <div class="menu-item">
+    <div class="menu-item" ng-class="{'active': menu.getCurrentState() === 'blog'}">
         <a ui-sref="blog"><i class="fa fa-book"></i>Blog</a>
     </div>
-    <div class="menu-item" ui-sref="contact">
+    <div class="menu-item" ng-class="{'active': menu.getCurrentState() === 'contact'}">
         <a ui-sref="contact"><i class="fa fa-phone"></i>Contact</a>
     </div>
 </div>
