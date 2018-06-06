@@ -5,11 +5,21 @@ catch(err) { app = angular.module("app-templates", []); }
 app.run(["$templateCache", function($templateCache) {
 "use strict";
 
-$templateCache.put("/components/main/main.html","<div class=\"main-content\">\n" +
+$templateCache.put("/components/blog/blog.html","<div class=\"blog\">\n" +
+    "    <h1>Blog</h1>\n" +
+    "    <p>This is blog info</p>\n" +
+    "</div>")
+
+$templateCache.put("/components/main/main.html","<div class=\"main\">\n" +
     "    <h1>Main</h1>\n" +
     "    <p>Welcome to my site, put some basic info here!</p>\n" +
     "\n" +
     "    {{main.test}}\n" +
+    "</div>")
+
+$templateCache.put("/components/contact/contact.html","<div class=\"contact\">\n" +
+    "    <h1>Contact</h1>\n" +
+    "    <p>This is contact info</p>\n" +
     "</div>")
 
 $templateCache.put("/components/menu/menu.html","<div class=\"menu-content\">\n" +

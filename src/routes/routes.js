@@ -31,9 +31,7 @@ angular.module('app-routes', ['ui.router'])
                 parent: 'default',
                 views: {
                     'content@': {
-                        templateUrl: '/components/main/main.html',
-                        controller: 'MainController',
-                        controllerAs: 'main'
+                        templateUrl: '/components/blog/blog.html',
                     }
                 }
             })
@@ -42,9 +40,7 @@ angular.module('app-routes', ['ui.router'])
                 parent: 'default',
                 views: {
                     'content@': {
-                        templateUrl: '/components/main/main.html',
-                        controller: 'MainController',
-                        controllerAs: 'main'
+                        templateUrl: '/components/contact/contact.html'
                     }
                 }
             });

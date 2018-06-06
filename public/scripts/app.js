@@ -3,13 +3,13 @@
 var app = app || {};
 app.controllers = app.controllers || {};
 
+
 app.controllers.main = function () {
     var main = this;
     console.log('main!');
 
     main.test = "test";
 };
-
 
 angular.module('app-routes', ['ui.router'])
     .config(['$stateProvider', '$urlRouterProvider', '$urlMatcherFactoryProvider', function ($stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider) {
@@ -44,9 +44,7 @@ angular.module('app-routes', ['ui.router'])
                 parent: 'default',
                 views: {
                     'content@': {
-                        templateUrl: '/components/main/main.html',
-                        controller: 'MainController',
-                        controllerAs: 'main'
+                        templateUrl: '/components/blog/blog.html',
                     }
                 }
             })
@@ -55,9 +53,7 @@ angular.module('app-routes', ['ui.router'])
                 parent: 'default',
                 views: {
                     'content@': {
-                        templateUrl: '/components/main/main.html',
-                        controller: 'MainController',
-                        controllerAs: 'main'
+                        templateUrl: '/components/contact/contact.html'
                     }
                 }
             });
