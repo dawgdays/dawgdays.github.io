@@ -2685,6 +2685,10 @@ a:hover {
   }
 }
 
+.main {
+  color: #1E1D1E;
+}
+
 .menu {
   display: grid;
 }
@@ -2713,8 +2717,4 @@ a:hover {
 }
 .menu .menu-item .fa {
   margin-right: 5px;
-}
-
-.main {
-  color: #1E1D1E;
 }

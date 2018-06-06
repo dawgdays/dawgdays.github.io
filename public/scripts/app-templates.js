@@ -10,13 +10,6 @@ $templateCache.put("/components/blog/blog.html","<div class=\"blog\">\n" +
     "    <p>This is blog info</p>\n" +
     "</div>")
 
-$templateCache.put("/components/main/main.html","<div class=\"main\">\n" +
-    "    <h1>Main</h1>\n" +
-    "    <p>Welcome to my site, put some basic info here!</p>\n" +
-    "\n" +
-    "    {{main.test}}\n" +
-    "</div>")
-
 $templateCache.put("/components/contact/contact.html","<div class=\"contact\">\n" +
     "    <h1>Contact</h1>\n" +
     "    <p>This is contact info</p>\n" +
@@ -40,6 +33,13 @@ $templateCache.put("/components/menu/menu.html","<div class=\"menu-content\">\n"
     "    <div class=\"menu-item\" ui-sref=\"contact\">\n" +
     "        <a ui-sref=\"contact\"><i class=\"fa fa-phone\"></i>Contact</a>\n" +
     "    </div>\n" +
+    "</div>")
+
+$templateCache.put("/components/main/main.html","<div class=\"main\">\n" +
+    "    <h1>Main</h1>\n" +
+    "    <p>Welcome to my site, put some basic info here!</p>\n" +
+    "\n" +
+    "    {{main.test}}\n" +
     "</div>")
 }]);
 })();
