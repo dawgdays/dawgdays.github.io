@@ -1,0 +1,20 @@
+.contact {
+    .contact-content {
+        display: grid;  //defines a grid container
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  //defines pattern for grid columns
+        grid-gap: 20px;  //defines spacing between grid items
+    }
+
+    .contact-item {
+        background-color: #c7c7c7;
+        border-radius: 5px;
+        padding: 10px; 
+        font-size: 0.9rem;
+
+        .label {
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+    }
+}
