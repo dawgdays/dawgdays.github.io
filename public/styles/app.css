@@ -2659,6 +2659,7 @@ a:hover {
   background-color: #e7dcd3;
   color: #391a25;
   padding: 0 15px;
+  overflow-y: auto;
 }
 .footer {
   grid-area: footer;
@@ -2671,7 +2672,7 @@ a:hover {
   padding: 0 15px;
 }
 .grid {
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template-areas: "header header" "menu content" "footer footer";
   grid-template-columns: 150px 1fr;
