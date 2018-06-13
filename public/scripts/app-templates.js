@@ -5,11 +5,6 @@ catch(err) { app = angular.module("app-templates", []); }
 app.run(["$templateCache", function($templateCache) {
 "use strict";
 
-$templateCache.put("/components/contact/contact.html","<div class=\"contact\">\n" +
-    "    <h1>Contact</h1>\n" +
-    "    <p>This is contact info</p>\n" +
-    "</div>")
-
 $templateCache.put("/components/blog/blog.html","<div class=\"blog\">\n" +
     "    <h1>Blog</h1>\n" +
     "\n" +
@@ -20,6 +15,38 @@ $templateCache.put("/components/blog/blog.html","<div class=\"blog\">\n" +
     "    </div>\n" +
     "</div>")
 
+$templateCache.put("/components/contact/contact.html","<div class=\"contact\">\n" +
+    "    <h1>Contact</h1>\n" +
+    "\n" +
+    "    <div class=\"contact-content\">\n" +
+    "        <div class=\"contact-item phone\">\n" +
+    "            <div class=\"label\">Mobile</div>\n" +
+    "            <div class=\"value\"><a href=\"tel:1-555-555-5555\">555-555-5555</a></div>\n" +
+    "        </div>\n" +
+    "    \n" +
+    "        <div class=\"contact-item email\">\n" +
+    "            <div class=\"label\">Email</div>\n" +
+    "            <div class=\"value\"><a href=\"mailto:verty@vertafore.com\">verty@vertafore.com</a></div>\n" +
+    "        </div>\n" +
+    "        \n" +
+    "        <div class=\"contact-item address\">\n" +
+    "            <div class=\"label\">Address</div>\n" +
+    "            <div class=\"value\">\n" +
+    "                <div>1500 Abbot Rd</div>\n" +
+    "                <div>Suite 100</div>\n" +
+    "                <div>East Lansing, MI 48823</div>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"contact-item\">\n" +
+    "            <div class=\"label\">Fax</div>\n" +
+    "            <div class=\"value\">What year is it?</div>\n" +
+    "        </div>\n" +
+    "\n" +
+    "    </div>\n" +
+    "\n" +
+    "</div>")
+
 $templateCache.put("/components/main/main.html","<div class=\"main\">\n" +
     "    <h1>Main</h1>\n" +
     "    <p>Welcome to my site, put some basic info here!</p>\n" +
@@ -28,9 +55,7 @@ $templateCache.put("/components/main/main.html","<div class=\"main\">\n" +
     "</div>")
 
 $templateCache.put("/components/menu/menu.html","<div class=\"menu-content\">\n" +
-    "\n" +
-    "    <!-- todo: make a collapsed version of the menu for mobile view -->\n" +
-    "\n" +
+    "    \n" +
     "    <div class=\"profile-pic\">\n" +
     "        <img src=\"/public/images/verty.png\">\n" +
     "    </div>\n" +

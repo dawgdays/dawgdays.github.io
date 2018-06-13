@@ -5,18 +5,16 @@ app.controllers = app.controllers || {};
 
 app.controllers.blog = function ($http) {
     var blog = this;
-    console.log('blog!');
 
-    $http.get('/src/components/blog/blog.json').then(function(res){
-        blog.blogs = res.data.blogs;
+    $http.get('/src/components/blog/blog.json').then(function (response) {
+        blog.blogs = response.data.blogs;
     });
 };
 
 app.controllers.main = function () {
     var main = this;
-    console.log('main!');
 
-    main.test = "test";
+    main.test = 'This data is rendered via the main controller';
 };
 
 app.controllers.menu = function ($state) {

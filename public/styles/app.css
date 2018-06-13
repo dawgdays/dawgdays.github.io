@@ -2686,6 +2686,23 @@ a:hover {
   }
 }
 
+.contact .contact-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+.contact .contact-item {
+  background-color: #c7c7c7;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+.contact .contact-item .label {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
 .main {
   color: #1E1D1E;
 }
