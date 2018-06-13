@@ -2633,14 +2633,6 @@ template {
 html {
   font-family: 'Source Sans Pro', sans-serif;
 }
-a {
-  color: #00165d;
-  text-decoration: none;
-}
-a:hover {
-  color: #1741cb;
-  text-decoration: underline;
-}
 .header {
   grid-area: header;
   display: grid;
@@ -2725,6 +2717,7 @@ a:hover {
 .menu .menu-item a {
   padding: 15px;
   color: white;
+  text-decoration: none;
 }
 .menu .menu-item.active {
   background-color: #3C4859;

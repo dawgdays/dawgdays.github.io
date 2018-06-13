@@ -5,16 +5,6 @@ catch(err) { app = angular.module("app-templates", []); }
 app.run(["$templateCache", function($templateCache) {
 "use strict";
 
-$templateCache.put("/components/blog/blog.html","<div class=\"blog\">\n" +
-    "    <h1>Blog</h1>\n" +
-    "\n" +
-    "    <div ng-repeat=\"blogRow in blog.blogs | orderBy:'-date'\">\n" +
-    "        <img ng-src=\"{{blogRow.picture}}\">\n" +
-    "        <h2>{{blogRow.title}} ({{blogRow.date | date : 'MM/dd/yyyy'}})</h2>\n" +
-    "        <p>{{blogRow.content}}</p>\n" +
-    "    </div>\n" +
-    "</div>")
-
 $templateCache.put("/components/contact/contact.html","<div class=\"contact\">\n" +
     "    <h1>Contact</h1>\n" +
     "\n" +
@@ -47,9 +37,28 @@ $templateCache.put("/components/contact/contact.html","<div class=\"contact\">\n
     "\n" +
     "</div>")
 
+$templateCache.put("/components/blog/blog.html","<div class=\"blog\">\n" +
+    "    <h1>Blog</h1>\n" +
+    "\n" +
+    "    <div ng-repeat=\"blogRow in blog.blogs | orderBy:'-date'\">\n" +
+    "        <img ng-src=\"{{blogRow.picture}}\">\n" +
+    "        <h2>{{blogRow.title}} ({{blogRow.date | date : 'MM/dd/yyyy'}})</h2>\n" +
+    "        <p>{{blogRow.content}}</p>\n" +
+    "    </div>\n" +
+    "</div>")
+
 $templateCache.put("/components/main/main.html","<div class=\"main\">\n" +
     "    <h1>Main</h1>\n" +
-    "    <p>Welcome to my site, put some basic info here!</p>\n" +
+    "    <p>Hi, I'm Verty! I've worked at Vertafore for as long as I can remember. We sure have been through a lot together.</p>\n" +
+    "\n" +
+    "    <p>Remember that time we went to the Olympics together?</p>\n" +
+    "    <p>\n" +
+    "        <img src=\"/public/images/olympic_verty.png\" style=\"width: 250px;\">\n" +
+    "    </p>\n" +
+    "\n" +
+    "    <p>\n" +
+    "        While you're here, feel free to check out the <a href=\"https://docs.google.com/presentation/d/1lWP-ErBNwXinTsqsIn3O3P58MKjWbLe4JAMQmCAjtpY/edit?usp=sharing\" target=\"_blank\">Slides</a> I made for you!\n" +
+    "    </p>\n" +
     "\n" +
     "    {{main.test}}\n" +
     "</div>")
