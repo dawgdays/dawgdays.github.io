@@ -1,8 +1,7 @@
 app.controllers.blog = function ($http) {
     var blog = this;
-    console.log('blog!');
 
-    $http.get('/src/components/blog/blog.json').then(function(res){
-        blog.blogs = res.data.blogs;
+    $http.get('/src/components/blog/blog.json').then(function (response) {
+        blog.blogs = response.data.blogs;
     });
 };

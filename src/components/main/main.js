@@ -1,6 +1,5 @@
 app.controllers.main = function () {
     var main = this;
-    console.log('main!');
 
-    main.test = "test";
+    main.test = 'This data is rendered via the main controller';
 };
