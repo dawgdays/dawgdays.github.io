@@ -5,6 +5,19 @@ catch(err) { app = angular.module("app-templates", []); }
 app.run(["$templateCache", function($templateCache) {
 "use strict";
 
+$templateCache.put("/components/blog/blog.html","<div class=\"blog\">\n" +
+    "    <h1>Blog</h1>\n" +
+    "\n" +
+    "    <!-- \n" +
+    "        Exercise 5 - Take the data from the request in Exercise 4 and render it on the page, hint 'ng-repeat' \n" +
+    "    -->\n" +
+    "    <div ng-repeat=\"blogRow in blog.blogs | orderBy:'-date'\">\n" +
+    "        <img ng-src=\"{{blogRow.picture}}\">\n" +
+    "        <h2>{{blogRow.title}} ({{blogRow.date | date : 'MM/dd/yyyy'}})</h2>\n" +
+    "        <p>{{blogRow.content}}</p>\n" +
+    "    </div>\n" +
+    "</div>")
+
 $templateCache.put("/components/contact/contact.html","<div class=\"contact\">\n" +
     "    <h1>Contact</h1>\n" +
     "\n" +
@@ -35,16 +48,6 @@ $templateCache.put("/components/contact/contact.html","<div class=\"contact\">\n
     "\n" +
     "    </div>\n" +
     "\n" +
-    "</div>")
-
-$templateCache.put("/components/blog/blog.html","<div class=\"blog\">\n" +
-    "    <h1>Blog</h1>\n" +
-    "\n" +
-    "    <div ng-repeat=\"blogRow in blog.blogs | orderBy:'-date'\">\n" +
-    "        <img ng-src=\"{{blogRow.picture}}\">\n" +
-    "        <h2>{{blogRow.title}} ({{blogRow.date | date : 'MM/dd/yyyy'}})</h2>\n" +
-    "        <p>{{blogRow.content}}</p>\n" +
-    "    </div>\n" +
     "</div>")
 
 $templateCache.put("/components/main/main.html","<div class=\"main\">\n" +

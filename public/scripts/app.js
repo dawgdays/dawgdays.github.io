@@ -6,9 +6,16 @@ app.controllers = app.controllers || {};
 app.controllers.blog = function ($http) {
     var blog = this;
 
+    /**
+     * Exercise 4 - Make an http request to the blog json, you should be able to see it in Chrome DevTools
+     */
     $http.get('/src/components/blog/blog.json').then(function (response) {
         blog.blogs = response.data.blogs;
     });
+
+    /**
+     * Exercise 5 - Take the data from the request in Exercise 4 and render it on the page
+     */
 };
 
 app.controllers.main = function () {
@@ -66,6 +73,10 @@ angular.module('app-routes', ['ui.router'])
                     }
                 }
             })
+            /**
+             * Exercise 3 - Setup a state for the contact page, http://localhost:3000/#/contact should work if this is done successfully
+             */
+            // TODO - vvvvv DELETE THIS CODE FOR EXERCISE 3
             .state('contact', {
                 url: '/contact',
                 parent: 'default',
@@ -75,6 +86,7 @@ angular.module('app-routes', ['ui.router'])
                     }
                 }
             });
+            // TODO - ^^^^ DELETE THIS CODE FOR EXERCISE 3
     }]);
 
 // Initialize the Angular module

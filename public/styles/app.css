@@ -2695,10 +2695,6 @@ html {
   margin-bottom: 5px;
 }
 
-.main {
-  color: #1E1D1E;
-}
-
 .menu {
   display: grid;
 }
@@ -2728,4 +2724,8 @@ html {
 }
 .menu .menu-item .fa {
   margin-right: 5px;
+}
+
+.main {
+  color: #1E1D1E;
 }

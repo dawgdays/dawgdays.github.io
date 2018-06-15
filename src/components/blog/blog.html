@@ -1,6 +1,10 @@
 <div class="blog">
     <h1>Blog</h1>
 
+    <!-- 
+        Exercise 5 - Take the data from the request in Exercise 4 and render it on the page, hint 'ng-repeat',
+                     each blog has a pictue
+    -->
     <div ng-repeat="blogRow in blog.blogs | orderBy:'-date'">
         <img ng-src="{{blogRow.picture}}">
         <h2>{{blogRow.title}} ({{blogRow.date | date : 'MM/dd/yyyy'}})</h2>
