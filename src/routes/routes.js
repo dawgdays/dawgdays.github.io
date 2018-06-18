@@ -42,15 +42,4 @@ angular.module('app-routes', ['ui.router'])
             /**
              * Exercise 3 - Setup a state for the contact page, http://localhost:3000/#/contact should work if this is done successfully
              */
-            // TODO - vvvvv DELETE THIS CODE FOR EXERCISE 3
-            .state('contact', {
-                url: '/contact',
-                parent: 'default',
-                views: {
-                    'content@': {
-                        templateUrl: '/components/contact/contact.html'
-                    }
-                }
-            });
-            // TODO - ^^^^ DELETE THIS CODE FOR EXERCISE 3
     }]);
