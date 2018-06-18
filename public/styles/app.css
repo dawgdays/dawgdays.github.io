@@ -2671,11 +2671,6 @@ html {
   grid-template-rows: 50px 1fr 30px;
 }
 @media screen and (max-width: 600px) {
-  .grid {
-    grid-template-areas: "header" "menu" "content" "footer";
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 275px 1fr 30px;
-  }
 }
 
 .contact .contact-content {
@@ -2693,6 +2688,10 @@ html {
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 5px;
+}
+
+.main {
+  color: #1E1D1E;
 }
 
 .menu {
@@ -2724,8 +2723,4 @@ html {
 }
 .menu .menu-item .fa {
   margin-right: 5px;
-}
-
-.main {
-  color: #1E1D1E;
 }
