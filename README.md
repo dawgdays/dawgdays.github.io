@@ -6,9 +6,9 @@ This workshop was created by [Caitlin Allie](https://github.com/caitlinallie) an
 
 ## Prereqs
 * Laptop
-* Node.js
-* IDE w/ Git integration OR GitHub desktop client
-* GitHub account
+* [Node.js](https://nodejs.org/en/)
+* IDE w/ [Git](https://git-scm.com/) integration OR [GitHub desktop client](https://desktop.github.com/)
+* [GitHub](https://github.com/) account
 
 ## Overview
 Have you ever wanted to build your own personal website, but were too overwhelmed to know where to start? Join us for some hands-on learning as we go through a basic sample website to show you what it takes to iteratively build a site from scratch. This workshop will be entirely front-end focused, using some technologies familiar to those who have worked in Sircon UI, as well as some new ones. The second half of the workshop will allow more free time for participants to setup their own personal website hosted on GitHub pages. The goal is for attendees to walk away with a website deployed to production that they can own and keep building on after they leave.
